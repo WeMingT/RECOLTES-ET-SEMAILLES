@@ -8,6 +8,7 @@
 ## 特性
 1. tex排版，保留脚注。
 2. 主要采用Deepseek V3进行AI翻译。
+3. 采用[ElegantBook](https://github.com/ElegantLaTeX/ElegantBook)模版。
 
 ## 方法以及流程
 1. 先将原法语pdf文件逐页分割。
