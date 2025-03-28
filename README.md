@@ -3,15 +3,18 @@
 粗制滥造，仅供交流学习，请谨慎使用！！！
 
 ## 进度
+
 法语：至第六章
 翻译：至第四章。
 
 ## 特性
+
 1. tex排版，保留脚注。
 2. 主要采用Grok3进行AI翻译。
 3. 采用[ElegantBook](https://github.com/ElegantLaTeX/ElegantBook)模版。
 
 ## 方法以及流程
+
 1. 先将原法语pdf文件逐页分割。
 2. 通过[Mistral AI](https://chat.mistral.ai/chat)，逐页OCR,转为tex代码。经尝试，Mistral AI识别脚注功能良好。
 3. 人工粗校OCR后的tex代码，并组织成一个完整的tex项目。
@@ -19,14 +22,19 @@
 5. 整理翻译后的tex文件，人工粗校。
 
 ## 贡献指南
+
 ### 法语OCR
+
 1. 以[150.pdf](https://github.com/WeMingT/RECOLTES-ET-SEMAILLES/blob/master/%E5%88%86%E5%89%B2%E5%90%8E%E7%9A%84pdf/150.pdf)与[151.pdf](https://github.com/WeMingT/RECOLTES-ET-SEMAILLES/blob/master/%E5%88%86%E5%89%B2%E5%90%8E%E7%9A%84pdf/151.pdf)为例。
 
 使用以下提示词:
+
 ```
 将法语文献完整地转为latex代码，保留排版格式，不翻译。脚注用\footnote格式，同一段文字在同一行代码呈现。
 ```
+
 然后将[150.pdf](https://github.com/WeMingT/RECOLTES-ET-SEMAILLES/blob/master/%E5%88%86%E5%89%B2%E5%90%8E%E7%9A%84pdf/150.pdf)与提示词发送[Mistral AI](https://chat.mistral.ai/chat)，预计得到以下结果:
+
 ```
 \documentclass{article}
 \usepackage[utf8]{inputenc}
@@ -45,9 +53,11 @@ Avant ce "réveil" de 1970, je n'aurais pas songé d'ailleurs à qualifier de "c
 
 \end{document}
 ```
+
 注意:由于AI的不确定性，得到的结果并不唯一，但需要保留`\footnote{}`等重要的格式。
 
 同理，处理[151.pdf](https://github.com/WeMingT/RECOLTES-ET-SEMAILLES/blob/master/%E5%88%86%E5%89%B2%E5%90%8E%E7%9A%84pdf/151.pdf)，得到以下结果：
+
 ```
 \documentclass{article}
 \usepackage[utf8]{inputenc}
@@ -66,6 +76,7 @@ Cette évocation de Aldo fait surgir le souvenir de Ionel Bucur, lui aussi empor
 ```
 
 如果你有基本的LaTeX知识，你可以对以上的OCR结果进行粗校，有以下几个需要格外注意的点：
+
 1. 注意保留`\footnote{}`等重要的格式。注意`\footnote{}`的内容与数量，OCR的结果可能会使脚注缺失换行，也可能多一两个脚注。
 2. 注意两页pdf的OCR结果的衔接。
 3. 注意`section`与`subsection`等标题。
@@ -76,7 +87,9 @@ Cette évocation de Aldo fait surgir le souvenir de Ionel Bucur, lui aussi empor
 如果你不懂LaTeX，那么将你OCR结果写入tex文件，文件名为`p150.tex`与`p151.tex`，然后提交到[每页的OCR结果](https://github.com/WeMingT/RECOLTES-ET-SEMAILLES/tree/master/每页的OCR结果)。
 
 ### 翻译
+
 使用[Grok3](https://grok.com/)以及以下提示词
+
 ```
 请将亚历山大·格罗滕迪克（Alexandre Grothendieck）的法语原著《Récoltes et Semailles》精准翻译为中文。用户所给文段为latex代码，翻译后，最终仅仅给出完整的latex代码块，严格遵循以下要求：
 
@@ -112,7 +125,13 @@ Cette évocation de Aldo fait surgir le souvenir de Ionel Bucur, lui aussi empor
 ① 术语一致性检查
 ② 法语-中文回译验证
 ```
-翻译未翻译的tex文件。
+
+翻译未翻译的tex文件，然后进行粗校，需格外注意以下几点：
+
+1. 检查\footnote{}等latex格式。
+2. 检查段落数。
+3. 检查grok3给出的翻译是否符合提示词的核心要求。
 
 ### 校对
+
 ......
