@@ -70,9 +70,10 @@ Cette évocation de Aldo fait surgir le souvenir de Ionel Bucur, lui aussi empor
 2. 注意两页pdf的OCR结果的衔接。
 3. 注意`section`与`subsection`等标题。
 4. 注意其他的特殊格式，比如数学公式，以及其他的LaTeX命令。
+5. 检查每页的第一句的前几个词与最后一句的最后几个词，因为OCR的结果可能会遗漏，以及出现换行缺失。
 然后将你修改后的OCR结果写入tex文件`。
 
-如果你不懂LaTeX，那么将你OCR结果写入tex文件，文件名为`p150.tex`与`p151.tex`，然后提交到每页的OCR结果。
+如果你不懂LaTeX，那么将你OCR结果写入tex文件，文件名为`p150.tex`与`p151.tex`，然后提交到[每页的OCR结果](https://github.com/WeMingT/RECOLTES-ET-SEMAILLES/tree/master/每页的OCR结果)。
 
 ### 翻译
 使用[Grok3](https://grok.com/)以及以下提示词
