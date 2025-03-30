@@ -4,9 +4,8 @@
 
 ## 进度
 
-法语：至第八章
-
-翻译：至第四章
+法语：至第十章
+翻译：至第四章。
 
 ## 特性
 
@@ -127,11 +126,7 @@ Cette évocation de Aldo fait surgir le souvenir de Ionel Bucur, lui aussi empor
 ② 法语-中文回译验证
 ```
 
-翻译未翻译的tex文件，然后进行粗校，需格外注意以下几点：
-
-1. 检查\footnote{}等latex格式。
-2. 检查段落数。
-3. 检查grok3给出的翻译是否符合提示词的核心要求。
+翻译未翻译的tex文件。
 
 ### 校对
 
